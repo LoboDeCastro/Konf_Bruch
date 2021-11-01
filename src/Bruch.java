@@ -30,19 +30,24 @@ public class Bruch {
     public Bruch multiplicate(Bruch b2) {
         /* TODO:
         *  Erstellen Sie für das Ergebnis eine neue Bruch-Variable
-        *   => Übergeben Sie im Konstruktur für numerator den
+        *   => Übergeben Sie im Konstruktor für numerator den
         *       eigenen numerator multipliziert mit b2.getNumerator()
         *   => Selbige auch für denominator
         *  Retournieren Sie ihre neue Bruch-Variable
         * */
 
+        int neuNumerator = this.numerator * b2.getNumerator();
+        int neuDenominator = this.denominator * b2.getDenominator();
 
-        return null;
+        return new Bruch(neuNumerator,neuDenominator);
     }
 
     public Bruch multiplicate(Bruch b2,  Bruch b3) {
         // TODO: Multiplizieren Sie den eigenen Bruch mit b2 und b3
 
-        return null;
+        int neuNumerator2 = this.numerator * b2.getNumerator() * b3.getNumerator();
+        int neuDenominator2 = this.denominator * b2.getDenominator() * b3.getDenominator();
+
+        return new Bruch(neuNumerator2,neuDenominator2);
     }
 }
